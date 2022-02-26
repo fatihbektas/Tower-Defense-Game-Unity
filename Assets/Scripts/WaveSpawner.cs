@@ -18,6 +18,8 @@ public class WaveSpawner : MonoBehaviour
     {
         if (_countdown <= 0f)
         {
+            //TODO: null kontrolü yap 
+            
             StartCoroutine(SpawnWave());
             _countdown = timeBetweenWaves;
         }
