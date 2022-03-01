@@ -22,7 +22,7 @@ AssetImportWorker0
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-49863
+50252
 Successfully changed project path to: /Users/fatih/RiderProjects/Tower-Defense-Game-Unity
 /Users/fatih/RiderProjects/Tower-Defense-Game-Unity
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -54,7 +54,7 @@ Successfully changed project path to: /Users/fatih/RiderProjects/Tower-Defense-G
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 71.24 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 64.59 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.2.12f1 (48b1aa000234)
 [Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2021.2.12f1/Unity.app/Contents/Resources/UnitySubsystems
@@ -69,74 +69,74 @@ Initialize mono
 Mono path[0] = '/Applications/Unity/Hub/Editor/2021.2.12f1/Unity.app/Contents/Managed'
 Mono path[1] = '/Applications/Unity/Hub/Editor/2021.2.12f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
 Mono config path = '/Applications/Unity/Hub/Editor/2021.2.12f1/Unity.app/Contents/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56209
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56604
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /Applications/Unity/Hub/Editor/2021.2.12f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
-Registered in 0.000920 seconds.
+Registered in 0.000344 seconds.
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 71.68 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 68.27 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.410 seconds
+- Completed reload, in  0.375 seconds
 Domain Reload Profiling:
-	ReloadAssembly (411ms)
-		BeginReloadAssembly (45ms)
+	ReloadAssembly (375ms)
+		BeginReloadAssembly (36ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (0ms)
-		EndReloadAssembly (300ms)
-			LoadAssemblies (45ms)
+		EndReloadAssembly (276ms)
+			LoadAssemblies (36ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (67ms)
+			SetupTypeCache (65ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (20ms)
-			SetupLoadedEditorAssemblies (187ms)
+			RebuildScriptCaches (19ms)
+			SetupLoadedEditorAssemblies (168ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (72ms)
+				RefreshPlugins (68ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (82ms)
-				ProcessInitializeOnLoadMethodAttributes (29ms)
+				ProcessInitializeOnLoadAttributes (72ms)
+				ProcessInitializeOnLoadMethodAttributes (23ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001361 seconds.
+Registered in 0.002288 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image /Users/fatih/RiderProjects/Tower-Defense-Game-Unity/Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image /Users/fatih/RiderProjects/Tower-Defense-Game-Unity/Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.30 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.36 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.588 seconds
+- Completed reload, in  0.572 seconds
 Domain Reload Profiling:
-	ReloadAssembly (588ms)
-		BeginReloadAssembly (55ms)
+	ReloadAssembly (573ms)
+		BeginReloadAssembly (53ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (3ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (13ms)
-		EndReloadAssembly (466ms)
-			LoadAssemblies (40ms)
+			CreateAndSetChildDomain (12ms)
+		EndReloadAssembly (453ms)
+			LoadAssemblies (46ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (163ms)
+			SetupTypeCache (158ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (35ms)
-			SetupLoadedEditorAssemblies (201ms)
+			RebuildScriptCaches (33ms)
+			SetupLoadedEditorAssemblies (192ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (2ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (54ms)
-				ProcessInitializeOnLoadAttributes (129ms)
+				BeforeProcessingInitializeOnLoad (53ms)
+				ProcessInitializeOnLoadAttributes (122ms)
 				ProcessInitializeOnLoadMethodAttributes (14ms)
 				AfterProcessingInitializeOnLoad (1ms)
 				EditorAssembliesLoaded (0ms)
@@ -146,13 +146,13 @@ Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launching external process: /Applications/Unity/Hub/Editor/2021.2.12f1/Unity.app/Contents/Tools/UnityShaderCompiler
-Launched and connected shader compiler UnityShaderCompiler after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.40 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.41 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3270 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 23 unused Assets / (95.6 KB). Loaded Objects now: 3731.
-Memory consumption went from 223.3 MB to 223.2 MB.
-Total: 2.403917 ms (FindLiveObjects: 0.146458 ms CreateObjectMapping: 0.046208 ms MarkObjects: 2.128625 ms  DeleteObjects: 0.081792 ms)
+Unloading 3272 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 23 unused Assets / (223.6 KB). Loaded Objects now: 3734.
+Memory consumption went from 223.3 MB to 223.1 MB.
+Total: 2.289375 ms (FindLiveObjects: 0.185125 ms CreateObjectMapping: 0.041459 ms MarkObjects: 2.000584 ms  DeleteObjects: 0.061250 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -166,13 +166,79 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 644.066042 seconds.
-  path: Assets/Scripts/BuildManager.cs
-  artifactKey: Guid(0cfebeea07e0a4ac991be3086ad5e7ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/BuildManager.cs using Guid(0cfebeea07e0a4ac991be3086ad5e7ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2316ef7abc1940ee8a690c92475d910a') in 0.150046 seconds 
+  Time since last request: 2544.308354 seconds.
+  path: Assets/StandardTurretIcon.png
+  artifactKey: Guid(7ced87b43e14144a5962f0c19dfd73c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/StandardTurretIcon.png using Guid(7ced87b43e14144a5962f0c19dfd73c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3dcb5f495904efa0487ee401020d79d5') in 0.471289 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 30.080020 seconds.
-  path: Assets/Scripts/Enemy.cs
-  artifactKey: Guid(b5f7738eb8da04723934d381ff57b755) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Enemy.cs using Guid(b5f7738eb8da04723934d381ff57b755) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67b25e0583b4a965b969c05f11497e7f') in 0.001884 seconds 
+  Time since last request: 3.734337 seconds.
+  path: Assets/Icons
+  artifactKey: Guid(681b93459244943db83cc7ed04d22017) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Icons using Guid(681b93459244943db83cc7ed04d22017) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e41cf632b4a25b8f5b588dbfe4233e0') in 0.000542 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 41.954910 seconds.
+  path: Assets/Icons/LaserBeamerIcon.png
+  artifactKey: Guid(3ae984a44e77742d5ab279109f41ec6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Icons/LaserBeamerIcon.png using Guid(3ae984a44e77742d5ab279109f41ec6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '458e66c5ed88342d5f5c68c7d06c0061') in 0.007631 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/Icons/StandardTurretIcon.png
+  artifactKey: Guid(44d8c24bb9d3d41b1a93c2960623ded3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Icons/StandardTurretIcon.png using Guid(44d8c24bb9d3d41b1a93c2960623ded3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1419420b5f00a69a8f922fc69eea1b0d') in 0.004290 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 57.813890 seconds.
+  path: Assets/Icons/StandardTurretIcon.png
+  artifactKey: Guid(44d8c24bb9d3d41b1a93c2960623ded3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Icons/StandardTurretIcon.png using Guid(44d8c24bb9d3d41b1a93c2960623ded3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aed2f6a26b8b19281305cb50c2968e8e') in 0.044496 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 87.100908 seconds.
+  path: Assets/Icons/MissileLauncherIcon.png
+  artifactKey: Guid(b9cde835d2e8348ac82f7a33db0ee842) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Icons/MissileLauncherIcon.png using Guid(b9cde835d2e8348ac82f7a33db0ee842) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37750838afb8cf628fe80503a1b5398e') in 0.017417 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 146.685372 seconds.
+  path: Assets/Icons/LaserBeamerIcon.png
+  artifactKey: Guid(3ae984a44e77742d5ab279109f41ec6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Icons/LaserBeamerIcon.png using Guid(3ae984a44e77742d5ab279109f41ec6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c591dc5eaed06e57bd11e5923b45d7ce') in 0.037477 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 43.516491 seconds.
+  path: Assets/Imports/Missile Launcher
+  artifactKey: Guid(297f11dd9dd134dcda667ab512b6db66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/Missile Launcher using Guid(297f11dd9dd134dcda667ab512b6db66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3275bfc1ce6c9863b01beaaf57cef91') in 0.000811 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.041056 seconds.
+  path: Assets/Imports/Missile Launcher/Missile Launcher Texture.png
+  artifactKey: Guid(16d2430a01b374ab9b5958d35efcbf0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/Missile Launcher/Missile Launcher Texture.png using Guid(16d2430a01b374ab9b5958d35efcbf0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1672bbb1c35edaeb2f60028c1c9ef01') in 0.006239 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.272326 seconds.
+  path: Assets/Imports/Missile Launcher/Materials
+  artifactKey: Guid(1a3f0f964bc1643f1b74a4f80970d9bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/Missile Launcher/Materials using Guid(1a3f0f964bc1643f1b74a4f80970d9bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9e0b289e2b2be140805136d26ebf411') in 0.001300 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.201275 seconds.
+  path: Assets/Imports/Missile Launcher/Materials/MissileLauncher_Primary.mat
+  artifactKey: Guid(7b737931c29ff4d3abddd03c1904394c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/Missile Launcher/Materials/MissileLauncher_Primary.mat using Guid(7b737931c29ff4d3abddd03c1904394c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4eaa6e7893b897880c5314b89e504562') in 0.072879 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.823562 seconds.
+  path: Assets/Imports/Missile Launcher/Missile Launcher.blend
+  artifactKey: Guid(b33ddca32349449a0807f40ae1631df2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/Missile Launcher/Missile Launcher.blend using Guid(b33ddca32349449a0807f40ae1631df2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '192b4d8f4d135163c3b7fdfe91fa24de') in 0.030886 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 64.614626 seconds.
+  path: Assets/Imports/Missile Launcher/Missile Launcher.fbx
+  artifactKey: Guid(d1234635b30064e75bc4d5d054df8bfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/Missile Launcher/Missile Launcher.fbx using Guid(d1234635b30064e75bc4d5d054df8bfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d85005faaac43bc1cdabfbd4a4477c8') in 0.099140 seconds 
