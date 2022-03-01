@@ -159,7 +159,7 @@ GameObject:
   - component: {fileID: 8633980353705739325}
   - component: {fileID: 63385930}
   m_Layer: 0
-  m_Name: Turret
+  m_Name: AnotherTurret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -194,8 +194,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f4b95e0d6670423fbc090420144821c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 15
-  fireRate: 1
+  range: 25
+  fireRate: 5
   enemyTag: Enemy
   partToRotate: {fileID: 1863368797380998612}
   turnSpeed: 10
