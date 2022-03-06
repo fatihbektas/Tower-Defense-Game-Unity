@@ -1,12 +1,13 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+
 public class Node : MonoBehaviour
 {
     [SerializeField] private Color hoverColor;
     public Vector3 positionOffset;
     private Renderer _rend;
     private Color _startColor;
-    private GameObject _turret;
+    [Header("Optional")] public GameObject turret;
     private BuildManager _buildManager;
 
     private void Start()
@@ -22,20 +23,19 @@ public class Node : MonoBehaviour
         {
             return;
         }
-        
-        if (_buildManager.GetTurretToBuild() == null)
+
+        if (!_buildManager.CanBuild)
         {
             return;
         }
-        
-        if (_turret != null)
+
+        if (turret != null)
         {
             Debug.Log("Can't build there!  - TODO: Display on screen");
             return;
         }
-        
-        var turretToBuild = _buildManager.GetTurretToBuild();
-        _turret = Instantiate(turretToBuild, transform.position + positionOffset, transform.rotation);
+
+        _buildManager.BuildTurretOn(this);
     }
 
     private void OnMouseEnter()
@@ -44,16 +44,22 @@ public class Node : MonoBehaviour
         {
             return;
         }
-        
-        if (_buildManager.GetTurretToBuild() == null)
+
+        if (_buildManager.CanBuild)
         {
             return;
         }
+
         _rend.material.color = hoverColor;
     }
 
     private void OnMouseExit()
     {
         _rend.material.color = _startColor;
+    }
+
+    public Vector3 GetBuildPosition()
+    {
+        return transform.position + positionOffset;
     }
 }
