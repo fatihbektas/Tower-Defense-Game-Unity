@@ -1,24 +1,24 @@
-using System.Security.Cryptography;
-using System.Xml;
 using UnityEngine;
 
 public class BuildManager : MonoBehaviour
 {
-    public static BuildManager instance;
+    public static BuildManager Instance;
     public TurretBlueprint turretToBuild;
-
+    public GameObject buildEffect;
+    
     private void Awake()
     {
-        if (instance != null)
+        if (Instance != null)
         {
             Debug.LogError("More than one Build manager in scene!");
             return;
         }
 
-        instance = this;
+        Instance = this;
     }
 
     public bool CanBuild => turretToBuild != null;
+    public bool HasMoney => PlayerStats.Money >= turretToBuild.cost;
 
     public void SelectTurretToBuild(TurretBlueprint turretBlueprint)
     {
@@ -35,9 +35,11 @@ public class BuildManager : MonoBehaviour
 
         PlayerStats.Money -= turretToBuild.cost;
         
-        GameObject turret = Instantiate(turretToBuild.prefab, node.GetBuildPosition(), Quaternion.identity);
+        var turret = Instantiate(turretToBuild.prefab, node.GetBuildPosition(), Quaternion.identity);
         node.turret = turret;
 
+       var effect=  Instantiate(buildEffect, node.GetBuildPosition(), Quaternion.identity);
+        Destroy(effect, 5f);
         Debug.Log("Turret build! Money left: "+ PlayerStats.Money);
     }
 }

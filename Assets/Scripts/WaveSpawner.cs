@@ -18,14 +18,13 @@ public class WaveSpawner : MonoBehaviour
     {
         if (_countdown <= 0f)
         {
-            //TODO: null kontrolü yap 
-            
             StartCoroutine(SpawnWave());
             _countdown = timeBetweenWaves;
         }
 
         _countdown -= Time.deltaTime;
-        waveCountdownText.text = Mathf.Round(_countdown).ToString(CultureInfo.CurrentCulture);
+        _countdown = Mathf.Clamp(_countdown, 0f, Mathf.Infinity);
+        waveCountdownText.text = $"{_countdown:00.00}";
     }
 
     private IEnumerator SpawnWave()
