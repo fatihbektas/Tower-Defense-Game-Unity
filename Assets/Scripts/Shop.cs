@@ -1,8 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class Shop : MonoBehaviour
 {
@@ -12,7 +8,7 @@ public class Shop : MonoBehaviour
 
     private void Start()
     {
-        _buildManager = BuildManager.instance;
+        _buildManager = BuildManager.Instance;
     }
 
     public void SelectStandardTurret()

@@ -7,6 +7,7 @@ public class Node : MonoBehaviour
     public Vector3 positionOffset;
     private Renderer _rend;
     private Color _startColor;
+    public Color notEnoughMoneyColor;
     [Header("Optional")] public GameObject turret;
     private BuildManager _buildManager;
 
@@ -14,20 +15,14 @@ public class Node : MonoBehaviour
     {
         _rend = GetComponent<Renderer>();
         _startColor = _rend.material.color;
-        _buildManager = BuildManager.instance;
+        _buildManager = BuildManager.Instance;
     }
 
     private void OnMouseDown()
     {
-        if (EventSystem.current.IsPointerOverGameObject())
-        {
-            return;
-        }
+        if (EventSystem.current.IsPointerOverGameObject()) return;
 
-        if (!_buildManager.CanBuild)
-        {
-            return;
-        }
+        if (!_buildManager.CanBuild) return;
 
         if (turret != null)
         {
@@ -40,17 +35,18 @@ public class Node : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        if (EventSystem.current.IsPointerOverGameObject())
-        {
-            return;
-        }
+        if (EventSystem.current.IsPointerOverGameObject()) return;
 
-        if (_buildManager.CanBuild)
-        {
-            return;
-        }
+        if (!_buildManager.CanBuild) return;
 
-        _rend.material.color = hoverColor;
+        if (_buildManager.HasMoney)
+        {
+            _rend.material.color = hoverColor;
+        }
+        else
+        {
+            _rend.material.color = notEnoughMoneyColor;
+        }
     }
 
     private void OnMouseExit()

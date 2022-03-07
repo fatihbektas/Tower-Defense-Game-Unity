@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
 
     private void Start()
     {
-        _target = Waypoints.points[0];
+        _target = Waypoints.Points[0];
     }
 
     private void Update()
@@ -21,13 +21,13 @@ public class Enemy : MonoBehaviour
 
     private void GetNextWaypoint()
     {
-        if (_wavePointIndex >= Waypoints.points.Length - 1)
+        if (_wavePointIndex >= Waypoints.Points.Length - 1)
         {
             Destroy(gameObject);
             return;
         }
 
         _wavePointIndex++;
-        _target = Waypoints.points[_wavePointIndex];
+        _target = Waypoints.Points[_wavePointIndex];
     }
 }
