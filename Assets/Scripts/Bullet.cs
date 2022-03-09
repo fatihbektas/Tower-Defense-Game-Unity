@@ -4,6 +4,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float speed = 70f;
+    public int damage = 20;
     public float explosionRadius = 0f;
     public GameObject impactEffect;
     private Transform _target;
@@ -42,19 +43,17 @@ public class Bullet : MonoBehaviour
         {
             Damage(_target);
         }
-        
-        Destroy(_target.gameObject);
         Destroy(gameObject);
     }
 
     private void Explode()
     {
         Collider[] colliders = Physics.OverlapSphere(transform.position, explosionRadius);
-        foreach (Collider colliderInExplosionRadius in colliders)
+        foreach (Collider collider in colliders)
         {
-            if (colliderInExplosionRadius.CompareTag("Enemy"))
+            if (collider.CompareTag("Enemy"))
             {
-                Damage(colliderInExplosionRadius.transform);
+                Damage(collider.transform);
             }
         }
     }
@@ -66,7 +65,12 @@ public class Bullet : MonoBehaviour
 
     private void Damage(Transform enemy)
     {
-        Destroy(enemy.gameObject);
+        var e = enemy.GetComponent<Enemy>();
+        
+        if (e != null)
+        {
+            e.TakeDamage(damage);
+        }
     }
 
     private void OnDrawGizmosSelected()
