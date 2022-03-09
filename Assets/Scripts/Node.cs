@@ -39,14 +39,7 @@ public class Node : MonoBehaviour
 
         if (!_buildManager.CanBuild) return;
 
-        if (_buildManager.HasMoney)
-        {
-            _rend.material.color = hoverColor;
-        }
-        else
-        {
-            _rend.material.color = notEnoughMoneyColor;
-        }
+        _rend.material.color = _buildManager.HasMoney ? hoverColor : notEnoughMoneyColor;
     }
 
     private void OnMouseExit()

@@ -52,7 +52,8 @@ public class Turret : MonoBehaviour
         var bulletGo = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         var bullet = bulletGo.GetComponent<Bullet>();
 
-        if (bullet != null) bullet.Seek(_target);
+        if (bullet != null) 
+            bullet.Seek(_target);
     }
 
     private void UpdateTarget()
