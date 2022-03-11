@@ -11,16 +11,18 @@ public class Turret : MonoBehaviour
     private float _fireCountdown;
 
     [Header("Use Laser")] public bool useLaser = false;
+    public int damageOverTime = 30;
     public LineRenderer lineRenderer;
     public ParticleSystem impactEffect;
+    public float slowPct = .5f;
 
     [Header("Unity Setup Fields")] public string enemyTag = "Enemy";
-
     public Transform partToRotate;
     public float turnSpeed = 10f;
     public Transform firePoint;
 
     private Transform _target;
+    private Enemy _targetEnemy;
 
     #endregion
 
@@ -34,11 +36,9 @@ public class Turret : MonoBehaviour
         if (_target == null)
         {
             if (!useLaser) return;
-            if (lineRenderer.enabled)
-            {
-                lineRenderer.enabled = false;
-                impactEffect.Stop();
-            }
+            if (!lineRenderer.enabled) return;
+            lineRenderer.enabled = false;
+            impactEffect.Stop();
 
             return;
         }
@@ -63,6 +63,9 @@ public class Turret : MonoBehaviour
 
     private void Laser()
     {
+       _targetEnemy.TakeDamage( (damageOverTime * Time.deltaTime));
+       _targetEnemy.Slow(slowPct);
+       
         if (!lineRenderer.enabled)
         {
             lineRenderer.enabled = true;
@@ -77,11 +80,10 @@ public class Turret : MonoBehaviour
         lineRenderer.SetPosition(1, targetPosition);
 
         var dir = firePointPosition - targetPosition;
-        
+
         impactEffectTransform.position = targetPosition;
 
         impactEffectTransform.rotation = Quaternion.LookRotation(dir);
-
     }
 
     private void LockOnTarget()
@@ -117,16 +119,19 @@ public class Turret : MonoBehaviour
         {
             var distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
 
-            if (distanceToEnemy < shortestDistance)
-            {
-                shortestDistance = distanceToEnemy;
-                nearestEnemy = enemy;
-            }
+            if (!(distanceToEnemy < shortestDistance)) continue;
+            shortestDistance = distanceToEnemy;
+            nearestEnemy = enemy;
         }
 
         if (nearestEnemy != null && shortestDistance <= range)
+        {
             _target = nearestEnemy.transform;
+            _targetEnemy = nearestEnemy.GetComponent<Enemy>();
+        }
         else
+        {
             _target = null;
+        }
     }
 }
