@@ -348,6 +348,7 @@
 "Assets/Scripts/Enemy.cs"
 "Assets/Scripts/EnemyMovement.cs"
 "Assets/Scripts/GameManager.cs"
+"Assets/Scripts/GameOver.cs"
 "Assets/Scripts/LivesUI.cs"
 "Assets/Scripts/MoneyUI.cs"
 "Assets/Scripts/Node.cs"
