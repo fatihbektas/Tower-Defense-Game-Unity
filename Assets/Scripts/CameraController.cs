@@ -13,6 +13,12 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        if (GameManager.GameIsOver)
+        {
+            enabled = false;
+            return;
+        }
+        
         if (Input.GetKeyDown(KeyCode.Escape)) _doMovement = !_doMovement;
 
         if (!_doMovement) return;
